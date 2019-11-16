@@ -11,6 +11,11 @@ app.get('/speak/:animal', (req, res) => {
   res.send(`The ${animal} says '${noises[animal]}'`);
 });
 
+app.get('/repeat/:something/:times', (req, res) => {
+  const something = `${req.params['something']} `;
+  const times = req.params['times'];
+  res.send(`${something.repeat(times-1)}${something.trimEnd()}`)
+})
 
 // To handle unexisting routes (404 response)
 app.use(function(req, res, next) {
