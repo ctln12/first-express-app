@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const noises = {'pig': 'Oink', 'cow': 'Moo', 'dog': 'Woof Woof!'}
-
 // route '/' renders 'Hi there, welcome to my assignment!'
 app.get('/', (req, res) => res.send('Hi there, welcome to my assignment!'));
 
@@ -11,15 +9,24 @@ app.get('/', (req, res) => res.send('Hi there, welcome to my assignment!'));
 // route '/speak/cow' renders "The cow says 'Moo'"
 // route '/speak/dog' renders "The dog says 'Woof Woof!'"
 app.get('/speak/:animal', (req, res) => {
-  const animal = req.params['animal'];
+  const noises = {
+    pig: 'Oink',
+    cow: 'Moo',
+    dog: 'Woof Woof!',
+    cat: 'I hate you humans',
+    goldfish: '...'
+  };
+  const animal = req.params.animal.toLowerCase();
+
   res.send(`The ${animal} says '${noises[animal]}'`);
 });
 
 // route '/repeat/hello/5' renders 'hello hello hello hello hello'
 // route '/repeat/blah/2' renders 'blah blah'
 app.get('/repeat/:something/:times', (req, res) => {
-  const something = `${req.params['something']} `;
-  const times = req.params['times'];
+  const something = `${req.params.something} `;
+  const times = req.params.times;
+
   res.send(`${something.repeat(times-1)}${something.trimEnd()}`)
 })
 
