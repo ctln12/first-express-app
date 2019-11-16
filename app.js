@@ -2,7 +2,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
+const noises = {'pig': 'Oink', 'cow': 'Moo', 'dog': 'Woof Woof!'}
+
+app.get('/', (req, res) => res.send('Hi there, welcome to my assignment!'));
+
+app.get('/speak/:animal', (req, res) => {
+  const animal = req.params['animal'];
+  res.send(`The ${animal} says '${noises[animal]}'`);
+});
+
 
 // To handle unexisting routes (404 response)
 app.use(function(req, res, next) {
