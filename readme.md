@@ -12,5 +12,5 @@
 ### To repeat a string a given number of times:
 - go to _localhost:3000/repeat/hello/5_
 - go to _localhost:3000/repeat/blah/2_
-or customize replacing yourString and numberOfTimes:
+or customize replacing _yourString_ and _numberOfTimes_:
 - go to _localhost:3000/repeat/yourString/numberOfTimes_
