@@ -8,6 +8,8 @@
 - go to _localhost:3000/speak/pig_
 - go to _localhost:3000/speak/cow_
 - go to _localhost:3000/speak/dog_
+- go to _localhost:3000/speak/cat_
+- go to _localhost:3000/speak/goldfish_
 
 ### To repeat a string a given number of times:
 - go to _localhost:3000/repeat/hello/5_
