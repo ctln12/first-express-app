@@ -1,16 +1,16 @@
 # First Express App
 
 ### To view the app:
-- run 'node app.js' in terminal
-- then open 'localhost:3000' in browser
+- run `node app.js` in terminal
+- then go to _localhost:3000_ in browser
 
 ### To know what an animal says:
-- go to 'localhost:3000/speak/pig'
-- go to 'localhost:3000/speak/cow'
-- go to 'localhost:3000/speak/dog'
+- go to _localhost:3000/speak/pig_
+- go to _localhost:3000/speak/cow_
+- go to _localhost:3000/speak/dog_
 
 ### To repeat a string a given number of times:
-- go to 'localhost:3000/repeat/hello/5'
-- go to 'localhost:3000/repeat/blah/2'
+- go to _localhost:3000/repeat/hello/5_
+- go to _localhost:3000/repeat/blah/2_
 or customize replacing yourString and numberOfTimes:
-- go to 'localhost:3000/repeat/yourString/numberOfTimes'
+- go to _localhost:3000/repeat/yourString/numberOfTimes_
